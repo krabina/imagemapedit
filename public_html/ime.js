@@ -23,9 +23,10 @@ if (mw.loader.load === undefined) mw.loader.load = importScriptURI;
 
 /*
 	Constants
+	put the contents of public_html in a directory "imagemapedit" on your server to run it locally, without tools.wmflabs.org server
 */
 
-var IME_BASE = '//tools.wmflabs.org/imagemapedit/';
+var IME_BASE = mw.config.get('wgScriptPath') + '/imagemapedit/';
 
 var IME_TEMPLATE = IME_BASE + 'template.php';
 var IME_TRANSLATIONS = IME_BASE + 'translations.php?lang=' + mw.config.get('wgUserLanguage');
